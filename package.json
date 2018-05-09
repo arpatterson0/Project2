@@ -1,0 +1,26 @@
+{
+    "name": "project2",
+    "description": "dr=escri",
+    "authors": "author",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "nodemon --rxec nbx babel-node--./index.js"
+    },
+"repository": {
+"type": "git",
+"url": "https://github.com/arpatterson0/Project2.git"
+},
+ "author": "Arkeem Patterson",
+ "license": "MIT",
+ "bugs": {
+     "url": "https://github.com/arpatterson0/Project2.git"
+ },
+  "homepage": "https://github.com/arpatterson0/Project2.git"
+,"dependencies": {
+ "express": "^4.16.3",
+ "mongoose":"5.0.17",
+ "nodemon":"1.17.3"   
+}
+ }   
