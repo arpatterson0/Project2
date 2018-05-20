@@ -1,0 +1,55 @@
+
+<header>
+
+<body>
+
+  <h1> Insert user information</h1>
+<form>
+  <div class="form-group">
+    <label>firstname</label>
+    <input type="text" name="" value="">
+</div>
+    <div class="form-group">
+      <label>lastName</label>
+      <input type="text" name="" value="">
+</div>
+      <div class="form-group">
+        <label>Date</label>
+        <input type="text" name="" value="">
+</div>
+        <div class="form-group">
+          <label>Company</label>
+          <input type="text" name="" value="">
+</div>
+          <div class="form-group">
+
+
+
+
+            <label>Phone number</label>
+            <input type="text" name="" value="">
+</div>
+            <div class="form-group">
+              <label>email</label>
+              <input type="text" name="" value="">
+</div>
+</form>
+
+</body>
+<script src="https://unpkg/vue"></script>
+<script>
+const app = new Vue({
+  el: '#app',
+  data: {
+    products:[]
+  },
+  created(){
+    fetch('MOCK_DATA.json')
+    .then(response => response.json())
+    .then(json=>(
+      this.products = json.products
+    ))
+  }
+})
+
+</script>
