@@ -1,26 +1,30 @@
 {
-    "name": "project2",
-    "description": "dr=escri",
-    "authors": "author",
-    "version": "1.0.0",
-    "main": "index.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "nodemon --rxec nbx babel-node--./index.js"
-    },
-"repository": {
-"type": "git",
-"url": "https://github.com/arpatterson0/Project2.git"
-},
- "author": "Arkeem Patterson",
- "license": "MIT",
- "bugs": {
-     "url": "https://github.com/arpatterson0/Project2.git"
- },
-  "homepage": "https://github.com/arpatterson0/Project2.git"
-,"dependencies": {
- "express": "^4.16.3",
- "mongoose":"5.0.17",
- "nodemon":"1.17.3"   
+  "name": "project2",
+  "version": "1.0.0",
+  "description": "REST API for COSC 331",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec npx babel-node -- ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arpatterson0/Project2"
+  },
+  "author": "Arkeem Patterson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arpatterson0/Project2"
+  },
+  "homepage": "https://github.com/arpatterson0/Project2",
+  "dependencies": {
+    "express": "^4.16.3",
+    "jquery": "^3.3.1",
+    "mongoose": "^5.0.17",
+    "nodemon": "^1.17.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
 }
- }   
