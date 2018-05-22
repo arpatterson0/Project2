@@ -2,7 +2,7 @@
        
     <head>
             <meta charset="utf-8"/>
-        <body>
+        <body bgcolor="#E6E6FA">
             <h1>Frontend Project 2</h1>
             <h2>contacts </h2>
         <ul id="contacts"> </ul>
@@ -16,6 +16,7 @@
         <button id="add-contacts">Add</button>
         <button id="Delete">Delete</button>
         <button id="updateContact">update</button>
+        
         <script src="jquery.min.js"></script>
         <script>$(function(){
             var $contacts = $('#contacts');
@@ -31,7 +32,6 @@
             function removeContact(contacts){
                 $contacts.remove()
             }
-
             import {
     addNewContact,
     getContacts,
@@ -76,7 +76,6 @@
         })
      
         $('Delete').on('click', function(){
-
         
         $.post({
             type: 'Post',
@@ -100,11 +99,9 @@ $.updateContact({
 updateContact(newContact)
     }
 })
-
         )})
         
         </script>
         
         </body>
-    </head>
-</html>
+</head>
