@@ -15,6 +15,7 @@
         <p>Email:<input type="text"id="Email"> </p>
         <button id="add-contacts">Add</button>
         <button id="Delete">Delete</button>
+        <button id="updateContact">update</button>
         <script src="jquery.min.js"></script>
         <script>$(function(){
             var $contacts = $('#contacts');
@@ -27,6 +28,17 @@
             function addContacts(contacts){
                 $contacts.append('<li>fisrtname: ' + contacts.$firstname +  ' ,lastname: ' + contacts.$Lastname + ', email' + contacts.$email+ ', company'+ contacts.$company+ ', phonenumber '+contacts.$phonenumber + ', Date' +contacts.$Date+ '</li>')
             }
+            function removeContact(contacts){
+                $contacts.remove()
+            }
+
+            import {
+    addNewContact,
+    getContacts,
+    getSpecificContact,
+    updateContact,
+    deleteContact
+  } from "../controllers/controller";
         $.get({
         type: 'GET',
         url: 'http://localhost:3000/contacts',
@@ -62,14 +74,34 @@
         }
         })
         })
-        })
-        <button id ="delete" onclick =" alert (contact has been deleted)"></button> 
+     
         $('Delete').on('click', function(){
-        $.post({
-            type: 'POST',
-            Method: 'Delete'
-        })
+
         
+        $.post({
+            type: 'Post',
+            Method: 'Delete',
+            url:'http://localhost:3000/contacts/:contactId',
+            success: function(removeContact){
+contact.deleteContact;
+            }
+        })})
+        $.getSpecificContact({
+            type:'GET',
+            url:'http://localhost:3000/contacts/:contactId',
+            success:function(newContact){
+                addContacts(contact);            }
+            
+        },
+$.updateContact({
+    type: 'POST',
+    url:'http://localhost:3000/contacts/:contactId',
+    success:function(updateContact){
+updateContact(newContact)
+    }
+})
+
+        )})
         
         </script>
         
