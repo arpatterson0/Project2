@@ -1,5 +1,7 @@
 <html>
+       
     <head>
+            <meta charset="utf-8"/>
         <body>
             <h1>Frontend Project 2</h1>
             <h2>contacts </h2>
@@ -12,7 +14,7 @@
         <p>Company:<input type="text"id="Company"> </p>
         <p>Email:<input type="text"id="Email"> </p>
         <button id="add-contacts">Add</button>
-        
+        <button id="Delete">Delete</button>
         <script src="jquery.min.js"></script>
         <script>$(function(){
             var $contacts = $('#contacts');
@@ -25,9 +27,9 @@
             function addContacts(contacts){
                 $contacts.append('<li>fisrtname: ' + contacts.$firstname +  ' ,lastname: ' + contacts.$Lastname + ', email' + contacts.$email+ ', company'+ contacts.$company+ ', phonenumber '+contacts.$phonenumber + ', Date' +contacts.$Date+ '</li>')
             }
-        $.ajax({
+        $.get({
         type: 'GET',
-        url: 'http://localhost:3000/contacts/:contactId',
+        url: 'http://localhost:3000/contacts',
         success: function(contacts){
             $.each(contacts, function(i,contact){
                 addContacts(contacts);
@@ -47,19 +49,30 @@
         phonenumber: $phonenumber.val(),
         Date: $Date.val(),
             };
-            $.ajax({
+            $.post({
                 type: 'POST',
-                url: 'http://localhost:3000/contacts/:contactId',
+                url: 'http://localhost:3000/contacts',
                 data: contact,
                 success: function(newContact){
                        addContacts(newContact);
                     },
         error: function(){
             alert('error saving contacts')
+            
         }
         })
         })
-        }) </script>
+        })
+        <button id ="delete" onclick =" alert (contact has been deleted)"></button> 
+        $('Delete').on('click', function(){
+        $.post({
+            type: 'POST',
+            Method: 'Delete'
+        })
+        
+        
+        </script>
+        
         </body>
     </head>
 </html>
